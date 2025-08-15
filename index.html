@@ -1,31 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odysee Video</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Embed</title>
   <style>
-    body {
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
-      background-color: #000;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: Arial, sans-serif;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 1rem;
     }
-    iframe {
+
+    .container {
       width: 100%;
       max-width: 960px;
-      aspect-ratio: 16 / 9;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <iframe id="odysee-iframe" 
-    src="https://odysee.com/%24/embed/%40aiartworks360%3A2%2Fchill%3Abf?r=AbZoUe4EeiwMC34SReobqS3SWBAnppu5" 
-    allowfullscreen>
-  </iframe>
+  <div class="container">
+    <h1>My Video Embed</h1>
+    <div class="video-wrapper">
+      <!-- Paste ANY embed code below -->
+      <iframe 
+        src="https://odysee.com/%24/embed/%40aiartworks360%3A2%2Fchill%3Abf?r=AbZoUe4EeiwMC34SReobqS3SWBAnppu5"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 </body>
 </html>
