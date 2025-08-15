@@ -63,19 +63,23 @@
     border: none;
   }
   .live-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: black;
-    padding: 6px 12px; /* bigger padding */
-    border-radius: 20px; /* rounder shape */
-    font-size: 1rem; /* larger text */
-    font-weight: bold;
-    border: 2px solid #ff4c4c; /* thicker border */
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: black;
+  padding: 8px 16px; /* larger padding */
+  border-radius: 25px; /* rounder pill shape */
+  font-size: 1.2rem; /* larger text */
+  font-weight: bold;
+  border: 3px solid #ff4c4c; /* thicker border */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.live-badge span {
+  color: #ff4c4c;
+  font-size: 1.5rem; /* larger red dot */
+}
   .live-badge span {
     color: #ff4c4c;
     font-size: 1.2rem; /* bigger dot */
