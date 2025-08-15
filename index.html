@@ -1,71 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Video Embed</title>
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      font-family: Arial, sans-serif;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 1rem;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 960px;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Stream</title>
+<style>
+  * {margin:0;padding:0;box-sizing:border-box;}
+  body {
+    background: radial-gradient(circle at bottom left, #0a1a2f, #000);
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 1rem;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .live-label {
+    color: #ff4c4c;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+  .live-label::before {
+    content: "● ";
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.3rem;
+  }
+  p.subtitle {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+  }
+  .status {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .status span::before {
+    content: "● ";
+    font-size: 0.7rem;
+  }
+  .status .online::before {color: #28d17c;}
+  .status .watching::before {color: #ccc;}
+  .video-container {
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 960px;
+    margin: 1rem auto;
+    aspect-ratio: 16 / 9;
+    position: relative;
+  }
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .live-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: black;
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid #ff4c4c;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .live-badge span {
+    color: #ff4c4c;
+    font-weight: bold;
+  }
+  footer {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+  .footer-left {font-weight: bold;}
+  .footer-right {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .tag {
+    background: #ff4c4c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>My Video Embed</h1>
-    <div class="video-wrapper">
-      <!-- Paste ANY embed code below -->
-      <iframe 
-        src="https://odysee.com/%24/embed/%40aiartworks360%3A2%2Fchill%3Abf?r=AbZoUe4EeiwMC34SReobqS3SWBAnppu5"
-        allowfullscreen>
-      </iframe>
-    </div>
+
+<header>
+  <div class="live-label">Live Stream</div>
+  <h1>2025 HighSpeed Revision | Operating Systems | Day 03</h1>
+  <p class="subtitle">This is a live stream of the 2025 HighSpeed Revision | Operating Systems | Day 03.</p>
+  <div class="status">
+    <span class="online">Online</span>
+    <span class="watching">Watching</span>
   </div>
+</header>
+
+<div class="video-container">
+  <!-- Replace with any embed -->
+  <iframe src="https://odysee.com/%24/embed/%40aiartworks360%3A2%2Fchill%3Abf?r=AbZoUe4EeiwMC34SReobqS3SWBAnppu5" allowfullscreen></iframe>
+  <div class="live-badge"><span>●</span> LIVE</div>
+</div>
+
+<footer>
+  <div class="footer-left">
+    2025 HighSpeed Revision | Operating Systems | Day 03 - A/L ICT
+  </div>
+  <div class="footer-right">
+    <span class="tag">YouTube</span>
+    <span>Live</span>
+    <span>Auto (HD)</span>
+  </div>
+</footer>
+
 </body>
 </html>
